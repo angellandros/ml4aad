@@ -11,9 +11,9 @@ $ sudo apt-get install python3.6-dev
 $ sudo apt-get install python3.6-tk
 ```
 
-Install `swing3.0`:
+Install `swig3.0`:
 ```bash
-$ sudo apt-get remove swing
+$ sudo apt-get remove swig
 $ sudo apt-get install swig3.0
 $ sudo ln -s /usr/bin/swig3.0 /usr/bin/swig
 ```
