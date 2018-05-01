@@ -102,3 +102,8 @@ ENV/
 
 # pycharm
 .idea/
+
+# pycharm latex
+out/*.aux
+out/*.out
+out/*.gz
