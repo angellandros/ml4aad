@@ -1,0 +1,69 @@
+\documentclass[DIN, pagenumber=false, fontsize=11pt, parskip=half]{scrartcl}
+
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+
+\usepackage[bottom=1in,top=0.5in,left=0.7in,right=0.7in]{geometry}
+\geometry{a4paper}
+
+\usepackage{hyperref}
+
+
+\setlength{\parindent}{0em}
+
+% set section in CM
+\setkomafont{section}{\normalfont\bfseries\Large}
+
+\newcommand{\mytitle}[1]{{\noindent\Large\textbf{#1}}}
+\newcommand{\mysection}[1]{\textbf{\section*{#1}}}
+\newcommand{\mysubsection}[2]{\romannumeral #1) #2}
+
+% fonts
+
+\usepackage[T1]{fontenc}
+\usepackage{tgpagella}
+%\usepackage[euler-digits,euler-hat-accent]{eulervm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\newcommand{\inc}[1]{\includegraphics[scale=0.4]{fig#1b.pdf} & \includegraphics[scale=0.4]{fig#1a.pdf}}
+
+%===================================
+\begin{document}
+
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+         blank/.style={draw=none},
+         edge from parent/.style=
+         {draw, edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+         level distance=1.5cm}
+
+\noindent\textbf{Machine Learning} \hfill \textbf{Albert-Ludwigs-Universität Freiburg}\\
+\textbf{for Automated Algorithm Design} \hfill \textbf{Institut für Informatik}\\
+Sommersemester 2018 \hfill Mohammad-Ali A'R\^ABI\\
+
+\mytitle{\ \ \"Ubungsblatt 01 \hfill \today}
+
+
+%===================================
+\mysection{Aufgabe 1.}
+
+\begin{figure}[!hb]
+\center
+\begin{tabular}{cc}
+\inc{1} \\ \inc{2} \\ \inc{3} \\ \inc{4} \\ \inc{5}
+\end{tabular}
+\caption{Acquisition function (EI) and RF predictions for steps \texttt{1..5}}
+\end{figure}
+
+\begin{figure}[!hb]
+\center
+\begin{tabular}{cc}
+\inc{6} \\ \inc{7} \\ \inc{8} \\ \inc{9} \\ \inc{10}
+\end{tabular}
+\caption{Acquisition function (EI) and RF predictions for steps \texttt{6..10}}
+\end{figure}
+
+\end{document}

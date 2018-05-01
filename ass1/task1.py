@@ -111,7 +111,8 @@ if __name__ == '__main__':
                                       eps_purity=0
                                       )
 
-    plot_state(smac, model, x_points, y_points, x_smac, y_smac, 5)
+    for i in range(10):
+        plot_state(smac, model, x_points, y_points, x_smac, y_smac, i+1)
 
     import os
     import shutil
