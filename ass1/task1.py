@@ -87,6 +87,14 @@ def plot_state(smac, model, x_points, y_points, x_smac, y_smac, step=None):
     plt.savefig('fig%db.pdf' % step)
 
 
+def clean_smac_shit():
+    import os
+    import shutil
+    for f in os.listdir('.'):
+        if f.startswith('smac3-output_'):
+            shutil.rmtree(f)
+
+
 if __name__ == '__main__':
     from smac.epm.rf_with_instances import RandomForestWithInstances
 
@@ -114,8 +122,4 @@ if __name__ == '__main__':
     for i in range(10):
         plot_state(smac, model, x_points, y_points, x_smac, y_smac, i+1)
 
-    import os
-    import shutil
-    for f in os.listdir('.'):
-        if f.startswith('smac3-output_'):
-            shutil.rmtree(f)
+    clean_smac_shit()
