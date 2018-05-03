@@ -52,7 +52,11 @@ def main(func_name):
 
     ax.plot_surface(x, y, z, cmap=cm.coolwarm, linewidth=0)
     ax.scatter(x_smac, y_smac, z_smac, color='red')
-    plt.show()
+    plt.savefig('func-%s-surf.pdf' % func_name)
+
+    ax = plt.subplot(111)
+    ax.boxplot(z_smac)
+    plt.savefig('func-%s-box.pdf' % func_name)
 
 
 if __name__ == '__main__':
